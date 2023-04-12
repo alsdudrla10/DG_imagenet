@@ -8,12 +8,12 @@ from guided_diffusion.image_datasets import load_data_latent
 import random
 
 @click.command()
-@click.option('--savedir',                    help='Save directory',  metavar='PATH',                 type=str, required=True,        default="/checkpoints/discriminator")
+@click.option('--savedir',                    help='Save directory',  metavar='PATH',                 type=str, required=True,        default="/pretrained_models/discriminator")
 @click.option('--gendir',                     help='Fake sample absolute directory', metavar='PATH',  type=str, required=True,        default="/gen_latents")
 @click.option('--datadir',                    help='Real sample absolute directory', metavar='PATH',  type=str, required=True,        default="/real_latents")
 @click.option('--img_resolution',             help='Image resolution', metavar='INT',                 type=click.IntRange(min=1),     default=256)
 
-@click.option('--pretrained_classifier_ckpt', help='Path of ADM classifier',  metavar='STR',          type=str,                       default='/checkpoints/ADM_classifier/32x32_classifier.pt')
+@click.option('--pretrained_classifier_ckpt', help='Path of ADM classifier',  metavar='STR',          type=str,                       default='/pretrained_models/ADM_classifier/32x32_classifier.pt')
 @click.option('--batch_size',                 help='Num samples', metavar='INT',                      type=click.IntRange(min=1),     default=1024)
 @click.option('--epoch',                      help='Num samples', metavar='INT',                      type=click.IntRange(min=1),     default=60)
 @click.option('--lr',                         help='Learning rate', metavar='FLOAT',                  type=click.FloatRange(min=0),   default=3e-4)
