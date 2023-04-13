@@ -4,7 +4,7 @@
 
 | [paper](https://arxiv.org/abs/2211.17091) |  <br>
 **Camera-ready final version will be released within this month. Stay tuned!** <br>
-**See [here](https://github.com/alsdudrla10/DG) for the Cifar-10 datasets** <br>
+**See [https://github.com/alsdudrla10/DG]([https://github.com/alsdudrla10/DG_imagenet](https://github.com/alsdudrla10/DG)) for the Cifar-10 code release.** <br>
 
 ## Overview
 ![Teaser image](./figures/Figure1_v2.PNG)
