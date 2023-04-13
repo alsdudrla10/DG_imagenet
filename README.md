@@ -39,7 +39,7 @@
 
 ### 4) Prepare a pretrained classifier
   - Download [DG_imagenet/pretrained_models/ADM_classifier/32x32_classifier.pt](https://drive.google.com/drive/folders/1yxjvfIW6HvLSJHACkC5-5U46Mny81SSI)
-  - As the latent is 32x32x4-dimensional vector, we follow [ADM[(https://github.com/openai/guided-diffusion) to train a classifier for 32x32x4 inputs.
+  - As the latent is 32x32x4-dimensional vector, we follow [ADM](https://github.com/openai/guided-diffusion) to train a classifier for 32x32x4 inputs.
 
   - Place **32x32_classifier.pt** at the directory specified.
   ```
