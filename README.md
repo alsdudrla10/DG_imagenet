@@ -72,14 +72,14 @@
 ## Results on data diffusion
 |FID-50k |ImageNet256|
 |------------|------------|
-|Privious SOTA|4.59|
-|+ DG|3.18|
+|ADM|4.59|
+|ADM-G++|3.18|
 
 ## Results on latent diffusion
 |FID-50k|ImageNet256|
 |------------|------------|
-|Privious SOTA|2.27|
-|+ DG|1.83|
+|DiT|2.27|
+|DiT-G++|1.83|
 
 
 ## Samples from ADM
