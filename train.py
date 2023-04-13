@@ -27,7 +27,7 @@ def main(**kwargs):
     ## Prepare fake/real data
     gen_train_loader = load_data_latent(
         data_dir=opts.gendir,
-        batch_size=int(batch_size / 2),
+        batch_size=int(opts.batch_size / 2),
         image_size=32,
         class_cond=True,
         random_crop=False,
@@ -35,7 +35,7 @@ def main(**kwargs):
     )
     real_train_loader = load_data_latent(
         data_dir=opts.datadir,
-        batch_size=int(batch_size / 2),
+        batch_size=int(opts.batch_size / 2),
         image_size=32,
         class_cond=True,
         random_crop=False,
@@ -44,29 +44,29 @@ def main(**kwargs):
 
     ## Extractor & Disciminator
     pretrained_classifier_ckpt = os.getcwd() + opts.pretrained_classifier_ckpt
-    classifier  = classifier_lib.load_classifier(pretrained_classifier_ckpt, 32, opts.device, eval=False)
+    classifier = classifier_lib.load_classifier(pretrained_classifier_ckpt, 32, opts.device, eval=False)
     discriminator = classifier_lib.load_discriminator(None, opts.device, True, eval=False)
 
     ## Prepare training
     vpsde = classifier_lib.vpsde()
-    optimizer = torch.optim.Adam(discriminator.parameters(), lr=3e-4, weight_decay=1e-7)
+    optimizer = torch.optim.Adam(discriminator.parameters(), lr=opts.lr, weight_decay=1e-7)
     loss = torch.nn.BCELoss()
 
     iterator = iter(gen_train_loader)
     ## Training
-    for i in range(epoch):
+    for i in range(opts.epoch):
         outs = []
         cors = []
         num_data = 0
         for data in real_train_loader:
             optimizer.zero_grad()
             real_inputs, real_condition = data
-            real_condition = real_condition.to(device)
-            real_inputs = real_inputs.to(device)
-            real_labels = torch.ones(real_inputs.shape[0]).to(device)
+            real_condition = real_condition.to(opts.device)
+            real_inputs = real_inputs.to(opts.device)
+            real_labels = torch.ones(real_inputs.shape[0]).to(opts.device)
 
             ## Real data perturbation
-            real_t, _ = vpsde.get_diffusion_time(real_inputs.shape[0], real_inputs.device, 1e-5, importance_sampling=True)
+            real_t, _ = vpsde.get_diffusion_time(real_inputs.shape[0], opts.device, 1e-5, importance_sampling=True)
             mean, std = vpsde.marginal_prob(real_t)
             z = torch.randn_like(real_inputs)
             perturbed_real_inputs = mean[:, None, None, None] * real_inputs + std[:, None, None, None] * z
@@ -77,12 +77,12 @@ def main(**kwargs):
             except:
                 iterator = iter(gen_train_loader)
                 fake_inputs, fake_condition = next(iterator)
-            fake_condition = fake_condition.to(device)
-            fake_inputs = fake_inputs.to(device)
-            fake_labels = torch.zeros(fake_inputs.shape[0]).to(device)
+            fake_condition = fake_condition.to(opts.device)
+            fake_inputs = fake_inputs.to(opts.device)
+            fake_labels = torch.zeros(fake_inputs.shape[0]).to(opts.device)
 
             ## Fake data perturbation
-            fake_t, _ = vpsde.get_diffusion_time(fake_inputs.shape[0], fake_inputs.device, 1e-5, importance_sampling=True)
+            fake_t, _ = vpsde.get_diffusion_time(fake_inputs.shape[0], opts.device, 1e-5, importance_sampling=True)
             mean, std = vpsde.marginal_prob(fake_t)
             z = torch.randn_like(fake_inputs)
             perturbed_fake_inputs = mean[:, None, None, None] * fake_inputs + std[:, None, None, None] * z
@@ -117,7 +117,7 @@ def main(**kwargs):
             print(f"{i}-th epoch BCE loss: {np.mean(outs)}, correction rate: {np.mean(cors)}")
 
         ## Save
-        torch.save(shallow_discriminator.state_dict(), savedir + f"/discriminator_{i+1}.pt")
+        torch.save(discriminator.state_dict(), savedir + f"/discriminator_{i+1}.pt")
 
 #----------------------------------------------------------------------------
 if __name__ == "__main__":

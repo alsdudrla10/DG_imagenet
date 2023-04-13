@@ -102,8 +102,8 @@ make_folders(realdir, fakedir)
 sample2datafoler(sampledir, fakedir)
 
 ## Extract latents and save
-gen_latents = os.getcwd() + "/real_latents/"
-real_latents = os.getcwd() + "/gen_latents/"
+gen_latents = os.getcwd() + "/gen_latents/"
+real_latents = os.getcwd() + "/real_latents/"
 os.makedirs(gen_latents, exist_ok=True)
 os.makedirs(real_latents, exist_ok=True)
 make_folders(realdir, gen_latents)
