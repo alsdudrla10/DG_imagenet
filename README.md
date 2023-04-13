@@ -31,7 +31,7 @@
   ```
 
 ### 3) Latent extraction
-  - The bonebone diffusion model ([DiT](https://github.com/facebookresearch/DiT)) is trained on latent space of pre-trained VAE. For the efficient training of discriminator, we pre-compute and store the latents of both real and generated data.
+  - We pre-compute and store latent values of real/generated data using the encoder of a pre-trained VAE model used in [DiT](https://github.com/facebookresearch/DiT).
   - Run:
   ```
   python3 data_tool.py
@@ -39,7 +39,8 @@
 
 ### 4) Prepare pretrained classifier
   - Download [DG_imagenet/pretrained_models/ADM_classifier/32x32_classifier.pt](https://drive.google.com/drive/folders/1yxjvfIW6HvLSJHACkC5-5U46Mny81SSI)
-  - We train 32 resolution classifier from [ADM](https://github.com/openai/guided-diffusion). Unlike data diffusion, the latent space of VAE serves at the input of classifier.
+  - As the latent is 32x32x4-dimensional vector, we follow [ADM[(https://github.com/openai/guided-diffusion) to train a classifier for 32x32x4 inputs.
+
   - Place **32x32_classifier.pt** at the directory specified.
   ```
   ${project_page}/DG_imagenet/
