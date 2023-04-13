@@ -4,7 +4,7 @@
 
 | [paper](https://arxiv.org/abs/2211.17091) |  <br>
 **Camera-ready final version will be released within this month. Stay tuned!** <br>
-**See [https://github.com/alsdudrla10/DG](https://github.com/alsdudrla10/DG) for the Cifar-10 code release.** <br>
+**See [https://github.com/alsdudrla10/DG](https://github.com/alsdudrla10/DG) for the CIFAR-10 code release.** <br>
 
 ## Overview
 ![Teaser image](./figures/Figure1_v2.PNG)
@@ -87,7 +87,7 @@
 ### Samples from ADM
 ![Teaser image](./figures/Figure2_v2.PNG)
 
-### Random samples from DiT-XL/2-G++ (FID=1.83)
+### Uncurated samples from DiT-XL/2-G++ (FID=1.83)
 ![Teaser image](./figures/figure5.png)
 
 ## Reference
