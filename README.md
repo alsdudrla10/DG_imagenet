@@ -19,7 +19,7 @@
 ### 2) Prepare real data
   - Place real data at the directory specified.
   ```
-  ${project_page}/DG_imagenet/
+  ${project_page}/DG_imagenet/data/
   ├── ImageNet2012
   │   ├── train
   │   │   ├── n01440764
