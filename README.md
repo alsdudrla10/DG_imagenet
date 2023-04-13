@@ -14,7 +14,7 @@
 ### 1) Fake sample generation
   - command: python3 sample.py --LT_cfg=1.5 --ST_cfg=1.5 --time_min=1000
 
-### 2) Prepare realdata
+### 2) Prepare real data
   - Download ImageNet2012 
   - save_directory: data/ImageNet2012/train/n01440764/n01440764_9981.JPEG
 
