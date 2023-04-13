@@ -37,10 +37,16 @@
   python3 data_tool.py
   ```
 
-
 ### 4) Prepare pretrained classifier
-  - download [here](https://drive.google.com/drive/folders/1_NlbYX9l7yW_y8Wnmb2Diyy59j95hznM)
-  - save_directory: DG/checkpoints/ADM_classifier/32x32_classifier.pt
+  - Download [DG_imagenet/pretrained_models/ADM_classifier/32x32_classifier.pt](https://drive.google.com/drive/folders/1yxjvfIW6HvLSJHACkC5-5U46Mny81SSI)
+  - We train 32 resolution classifier from [ADM](https://github.com/openai/guided-diffusion). Unlike data diffusion, the latent space of VAE serves at the input of classifier.
+  - Place **32x32_classifier.pt** at the directory specified.
+  ```
+  ${project_page}/DG_imagenet/
+  ├── pretrained_models
+  │   ├── ADM_classifier/32x32_classifier.pt
+  ├── ...
+  ```
 
 ### 5) Discriminator training
   - command: python3 train.py
