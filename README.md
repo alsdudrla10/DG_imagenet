@@ -18,7 +18,7 @@
   - save_directory: data/ImageNet2012/train/n01440764/n01440764_9981.JPEG
 
 ### 3) Latent extraction
-  - For efficient training, we save vae's latent space (4*32*32)
+  - For efficient training, we save vae's latent space
   - command: python3 data_tool.py
 
 ### 4) Prepare pretrained classifier
@@ -30,23 +30,21 @@
   - downalod checkpoint [here](https://drive.google.com/drive/folders/1lOwHMS1GRuIfJ9ix9A6vtOm7vX8EN87Y)
 
 ### 6) Generation with Discriminator Guidance
-  - command: python3 generate.py --network checkpoints/pretrained_score/edm-cifar10-32x32-uncond-vp.pkl --outdir=samples/cifar_uncond
+  - command: python3 sample.py
   
-### 7) FID evaluation
-  - command: python3 fid_npzs.py --ref=/stats/cifar10-32x32.npz --num_samples=50000 --images=/samples/cifar_uncond/
-  - download stat files [here](https://drive.google.com/drive/folders/1lOwHMS1GRuIfJ9ix9A6vtOm7vX8EN87Y)
+
 
 ## Results on data diffusion
-|FID-50k |Cifar-10|FFHQ64|CelebA64|ImageNet256|
+|FID-50k |ImageNet256|
 |------------|------------|------------|------------|------------|
-|Privious SOTA|2.03|2.39|1.90|4.59|
-|+ DG|1.77|1.98|1.34|3.17|
+|Privious SOTA|4.59|
+|+ DG|3.17|
 
 ## Results on latent diffusion
-|FID-50k |Cifar-10|ImageNet256|
+|FID-50k|ImageNet256|
 |------------|------------|------------|
-|Privious SOTA|2.10|2.27|
-|+ DG|1.94|1.83|
+|Privious SOTA|2.27|
+|+ DG|1.83|
 
 
 ## Samples from recall-best DG
