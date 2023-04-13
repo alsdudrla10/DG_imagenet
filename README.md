@@ -17,7 +17,7 @@
   python3 sample.py --LT_cfg=1.5 --ST_cfg=1.5 --time_min=1000
    ```
 ### 2) Prepare real data
-  - Place **ImageNet2012 data** at the directory specified.
+  - Place real data at the directory specified.
   ```
   ${project_page}/DG_imagenet/
   ├── ImageNet2012
