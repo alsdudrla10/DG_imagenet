@@ -68,6 +68,8 @@
   ```
   python3 sample.py
   ```
+### 7) Evaluate FID
+   - We evaluate using code from [ADM](https://github.com/openai/guided-diffusion)
 
 ## Experimental Results
 
