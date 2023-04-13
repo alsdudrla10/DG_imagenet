@@ -36,7 +36,6 @@
 
 
 ## Results on data diffusion
-
 |FID-50k |ImageNet256|
 |------------|------------|------------|------------|------------|
 |Privious SOTA|4.59|
