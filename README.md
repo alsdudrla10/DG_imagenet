@@ -48,5 +48,5 @@
 |+ DG|1.83|
 
 
-## Samples from recall-best DG
+## Samples from ADM
 ![Teaser image](./figures/Figure2.PNG)
