@@ -50,7 +50,7 @@
 
 ### 5) Discriminator training
   - Download pre-trained checkpoint [DG_imagenet/pretrained_models/discriminator/discriminator_7.pt](https://drive.google.com/drive/folders/1-2ytbvo7yG2X3Z65XNugBhPRKangvZgg) for the test.
-  - Place discriminator_7.pt at the directory specified.
+  - Place **discriminator_7.pt** at the directory specified.
   ```
   ${project_page}/DG_imagenet/
   ├── pretrained_models
