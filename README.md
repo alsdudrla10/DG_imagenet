@@ -11,7 +11,7 @@
 
 ## Step-by-Step running of Discriminator Guidance
 
-### 1) Fake sample generation
+### 1) Generate fake samples
   - Run:
   ```
   python3 sample.py --LT_cfg=1.5 --ST_cfg=1.5 --time_min=1000
@@ -30,14 +30,14 @@
   ├── ...
   ```
 
-### 3) Latent extraction
+### 3) Extract latent vectors.
   - We pre-compute and store latent values of real/generated data using the encoder of a pre-trained VAE model used in [DiT](https://github.com/facebookresearch/DiT).
   - Run:
   ```
   python3 data_tool.py
   ```
 
-### 4) Prepare pretrained classifier
+### 4) Prepare a pretrained classifier
   - Download [DG_imagenet/pretrained_models/ADM_classifier/32x32_classifier.pt](https://drive.google.com/drive/folders/1yxjvfIW6HvLSJHACkC5-5U46Mny81SSI)
   - As the latent is 32x32x4-dimensional vector, we follow [ADM[(https://github.com/openai/guided-diffusion) to train a classifier for 32x32x4 inputs.
 
@@ -49,7 +49,7 @@
   ├── ...
   ```
 
-### 5) Discriminator training
+### 5) Train a discriminator
   - Download pre-trained checkpoint [DG_imagenet/pretrained_models/discriminator/discriminator_7.pt](https://drive.google.com/drive/folders/1-2ytbvo7yG2X3Z65XNugBhPRKangvZgg) for the test.
   - Place **discriminator_7.pt** at the directory specified.
   ```
@@ -63,7 +63,7 @@
   python3 train.py
   ```
 
-### 6) Generation with Discriminator Guidance
+### 6) Generate discriminator-guided samples
   - Run:
   ```
   python3 sample.py
