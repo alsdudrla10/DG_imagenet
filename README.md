@@ -12,11 +12,23 @@
 ## Step-by-Step running of Discriminator Guidance
 
 ### 1) Fake sample generation
-  - command: python3 sample.py --LT_cfg=1.5 --ST_cfg=1.5 --time_min=1000
-
+  - Run:
+  ```
+  python3 sample.py --LT_cfg=1.5 --ST_cfg=1.5 --time_min=1000
+   ```
 ### 2) Prepare real data
-  - Download ImageNet2012 
-  - save_directory: data/ImageNet2012/train/n01440764/n01440764_9981.JPEG
+  - Place **ImageNet2012 data** at the directory specified.
+  ```
+  ${project_page}/DG_imagenet/
+  ├── ImageNet2012
+  │   ├── train
+  │   │   ├── n01440764
+  │   │   │   ├── n01440764_10026.JPEG
+  │   │   │   ├── ...
+  │   │   ├── ...
+  │   ├── ...
+  ├── ...
+  ```
 
 ### 3) Latent extraction
   - For efficient training, we save vae's latent space
