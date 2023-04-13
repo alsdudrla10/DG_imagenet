@@ -17,7 +17,7 @@
   python3 sample.py --LT_cfg=1.5 --ST_cfg=1.5 --time_min=1000
    ```
 ### 2) Prepare real data
-  - Place real data at the directory specified.
+  - Place real data at the directory specified below.
   ```
   ${project_page}/DG_imagenet/data/
   ├── ImageNet2012
@@ -41,7 +41,7 @@
   - Download [DG_imagenet/pretrained_models/ADM_classifier/32x32_classifier.pt](https://drive.google.com/drive/folders/1yxjvfIW6HvLSJHACkC5-5U46Mny81SSI)
   - As the latent is 32x32x4-dimensional vector, we follow [ADM](https://github.com/openai/guided-diffusion) to train a classifier for 32x32x4 inputs.
 
-  - Place **32x32_classifier.pt** at the directory specified.
+  - Place **32x32_classifier.pt** at the directory specified below.
   ```
   ${project_page}/DG_imagenet/
   ├── pretrained_models
@@ -51,7 +51,7 @@
 
 ### 5) Train a discriminator
   - Download pre-trained checkpoint [DG_imagenet/pretrained_models/discriminator/discriminator_7.pt](https://drive.google.com/drive/folders/1-2ytbvo7yG2X3Z65XNugBhPRKangvZgg) for the test.
-  - Place **discriminator_7.pt** at the directory specified.
+  - Place **discriminator_7.pt** at the directory specified below.
   ```
   ${project_page}/DG_imagenet/
   ├── pretrained_models
