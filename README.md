@@ -22,12 +22,12 @@
   - command: python3 data_tool.py
 
 ### 4) Prepare pretrained classifier
-  - download [here](https://drive.google.com/drive/folders/1lOwHMS1GRuIfJ9ix9A6vtOm7vX8EN87Y)
+  - download [here](https://drive.google.com/drive/folders/1_NlbYX9l7yW_y8Wnmb2Diyy59j95hznM)
   - save_directory: DG/checkpoints/ADM_classifier/32x32_classifier.pt
 
 ### 5) Discriminator training
   - command: python3 train.py
-  - downalod checkpoint [here](https://drive.google.com/drive/folders/1lOwHMS1GRuIfJ9ix9A6vtOm7vX8EN87Y)
+  - downalod checkpoint [here](https://drive.google.com/drive/folders/1_NlbYX9l7yW_y8Wnmb2Diyy59j95hznM)
 
 ### 6) Generation with Discriminator Guidance
   - command: python3 sample.py
