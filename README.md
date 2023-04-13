@@ -31,8 +31,12 @@
   ```
 
 ### 3) Latent extraction
-  - For efficient training, we save vae's latent space
-  - command: python3 data_tool.py
+  - The bonebone diffusion model is trained on latent space of pre-trained VAE. For the efficient training of discriminator, we pre-compute and store the latent of both real and generated data.
+  - Run:
+  ```
+  python3 data_tool.py
+  ```
+
 
 ### 4) Prepare pretrained classifier
   - download [here](https://drive.google.com/drive/folders/1_NlbYX9l7yW_y8Wnmb2Diyy59j95hznM)
