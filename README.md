@@ -68,19 +68,24 @@
   python3 sample.py
   ```
 
+## Experimental Results
 
-## Results on data diffusion
+### Results on data diffusion
 |FID-50k |ImageNet256|
 |------------|------------|
 |ADM|4.59|
 |ADM-G++|3.18|
 
-## Results on latent diffusion
+### Results on latent diffusion
 |FID-50k|ImageNet256|
 |------------|------------|
 |DiT|2.27|
 |DiT-G++|1.83|
 
 
-## Samples from ADM
+### Samples from ADM
 ![Teaser image](./figures/Figure2_v2.PNG)
+
+### Random samples from DiT-XL/2-G++ (FID=1.83)
+![Teaser image](./figures/Figure5.PNG)
+
