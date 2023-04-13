@@ -87,5 +87,5 @@
 ![Teaser image](./figures/Figure2_v2.PNG)
 
 ### Random samples from DiT-XL/2-G++ (FID=1.83)
-![Teaser image](./figures/Figure5.PNG)
+![Teaser image](./figures/Figure5.png)
 
