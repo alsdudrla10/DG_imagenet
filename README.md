@@ -89,3 +89,17 @@
 ### Random samples from DiT-XL/2-G++ (FID=1.83)
 ![Teaser image](./figures/figure5.png)
 
+## Reference
+If you find the code useful for your research, please consider citing
+```bib
+@article{kim2022refining,
+  title={Refining Generative Process with Discriminator Guidance in Score-based Diffusion Models},
+  author={Kim, Dongjun and Kim, Yeongmin and Kang, Wanmo and Moon, Il-Chul},
+  journal={arXiv preprint arXiv:2211.17091},
+  year={2022}
+}
+```
+This work is heavily built upon the code from
+ - *Peebles, W., & Xie, S. (2022). Scalable Diffusion Models with Transformers. arXiv preprint arXiv:2212.09748.*
+ - *Dhariwal, P., & Nichol, A. (2021). Diffusion models beat gans on image synthesis. Advances in Neural Information Processing Systems, 34, 8780-8794.*
+
