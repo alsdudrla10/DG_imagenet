@@ -31,7 +31,7 @@
   ```
 
 ### 3) Latent extraction
-  - The bonebone diffusion model((DiT)[https://github.com/facebookresearch/DiT]) is trained on latent space of pre-trained VAE. For the efficient training of discriminator, we pre-compute and store the latents of both real and generated data.
+  - The bonebone diffusion model([DiT](https://github.com/facebookresearch/DiT)) is trained on latent space of pre-trained VAE. For the efficient training of discriminator, we pre-compute and store the latents of both real and generated data.
   - Run:
   ```
   python3 data_tool.py
