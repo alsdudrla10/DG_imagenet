@@ -31,7 +31,7 @@
   ```
 
 ### 3) Latent extraction
-  - The bonebone diffusion model([DiT](https://github.com/facebookresearch/DiT)) is trained on latent space of pre-trained VAE. For the efficient training of discriminator, we pre-compute and store the latents of both real and generated data.
+  - The bonebone diffusion model ([DiT](https://github.com/facebookresearch/DiT)) is trained on latent space of pre-trained VAE. For the efficient training of discriminator, we pre-compute and store the latents of both real and generated data.
   - Run:
   ```
   python3 data_tool.py
@@ -49,12 +49,24 @@
   ```
 
 ### 5) Discriminator training
-  - command: python3 train.py
-  - downalod checkpoint [here](https://drive.google.com/drive/folders/1_NlbYX9l7yW_y8Wnmb2Diyy59j95hznM)
+  - Download pre-trained checkpoint [DG_imagenet/pretrained_models/discriminator/discriminator_7.pt](https://drive.google.com/drive/folders/1-2ytbvo7yG2X3Z65XNugBhPRKangvZgg) for the test.
+  - Place discriminator_7.pt at the directory specified.
+  ```
+  ${project_page}/DG_imagenet/
+  ├── pretrained_models
+  │   ├── discriminator/discriminator_7.pt
+  ├── ...
+  ```
+  - To train the discriminator from scratch, run:
+  ```
+  python3 train.py
+  ```
 
 ### 6) Generation with Discriminator Guidance
-  - command: python3 sample.py
-  
+  - Run:
+  ```
+  python3 sample.py
+  ```
 
 
 ## Results on data diffusion
