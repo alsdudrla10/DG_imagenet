@@ -30,7 +30,7 @@
   ├── ...
   ```
 
-### 3) Extract latent vectors.
+### 3) Extract latent vectors
   - We pre-compute and store latent values of real/generated data using the encoder of a pre-trained VAE model used in [DiT](https://github.com/facebookresearch/DiT).
   - Run:
   ```
